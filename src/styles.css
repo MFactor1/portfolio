@@ -1,0 +1,161 @@
+@font-face {
+	font-family: "Global";
+	src: local("Global"),
+	 url("./assets/fonts/JetBrainsMono-Light.ttf") format("truetype");
+	font-weight: soft;
+}
+
+@font-face {
+	font-family: "GlobalItalic";
+	src: local("GlobalItalic"),
+	 url("./assets/fonts/JetBrainsMono-LightItalic.ttf") format("truetype");
+	font-weight: soft;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Global, sans-serif;
+	margin: 80px;
+	font-size: 14px;
+	padding: 0;
+	height: 100%;
+	color: #ffffff;
+	background-image: url('./assets/backspash/Aurora_Mac.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.headerbar {
+	margin-left: -20px;
+	margin-bottom: 20px;
+}
+
+.bio {
+	margin-top: 30px;
+}
+
+.jobTitle {
+	margin-bottom: 1px;
+	margin-top: 30px;
+}
+
+.companyName {
+	margin-top: 0;
+	font-family: GlobalItalic, sans-serif;
+}
+
+.jobSkills {
+	font-family: GlobalItalic, sans-serif;
+}
+
+.navbar a {
+	margin-right: 20px;
+	color: #ffffff;
+	text-decoration: none;
+	font-family: GlobalItalic;
+}
+
+.navbar a:hover {
+	text-decoration: underline;
+}
+
+.skillsTitle {
+	margin-top: 30px;
+	font-family: GlobalItalic;
+}
+
+.skillItem {
+	margin-bottom: -6px;
+}
+
+.projectHeader {
+	margin-top: 30px;
+}
+
+.projectTitle {
+	margin-bottom: 1px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16.3px;
+	font-weight: bold;
+}
+
+.projectTitle:hover {
+	text-decoration: underline;
+}
+
+.projectTitleNoLink {
+	margin-bottom: 1px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16.3px;
+	font-weight: bold;
+}
+
+.projectSkills {
+	margin-top: 0px;
+	font-family: GlobalItalic;
+	margin-bottom: 0px;
+}
+
+.projectDesc {
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.projectDescFirstLine {
+	margin-top: 0px;
+}
+
+.imgPanel {
+	display: flex;
+	gap: 10px;
+}
+
+.showMore {
+	font-family: GlobalItalic;
+	cursor: pointer;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+.showMore:hover {
+	text-decoration: Underline;
+}
+
+footer hr {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.footerLinks a {
+	margin-right: 20px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footerLinks a:hover {
+	text-decoration: underline;
+}
+
+.credits {
+	margin-top: 20px;
+}
+
+
