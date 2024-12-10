@@ -74,11 +74,15 @@ function Home() {
 			<div className="bio">
 				<p>Hi, thanks for stopping by!</p>
 				<p>
-				I’m Matthew, a 3rd year student at McMaster University pursuing a degree in Software Engineering,
-				and the Director of Projects at McMaster AI Society.
-				<br />
-				In my free time I enjoy pushing myself on my roadbike, conquering new slopes on my skis,
-				honing my skills in games, and of course, working on side-projects.
+          <i>Where I'm at:</i>
+          <br />
+          Pursuing Software Engineering at McMaster University
+          <br />
+          Working to support our project teams McMaster Artificial Intelligence Society
+          <br />
+          Pushing my limits on a road bike
+          <br />
+          Conquering the slopes where no one else goes
 				</p>
 			</div>
 		</>
