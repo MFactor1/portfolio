@@ -82,7 +82,7 @@ function Home() {
           <br />
           Pushing my limits on a road bike
           <br />
-          Conquering the slopes where no one else goes
+          Searching for where the snow is fresh
 				</p>
 			</div>
 		</>
