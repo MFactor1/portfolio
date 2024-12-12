@@ -98,10 +98,10 @@ function Experience() {
       </header>
       <div className="jobDesc">
         <p className="jobSkills">
-          Used: Python, Gevent, Jenkins, Linux, MAKE, Jira, GCS, Amazon S3, Azure Blob Storage.
+          Used: Python, Gevent, Jenkins, Linux, MAKE, Jira, GCS, Amazon S3, Azure Blob Storage
         </p>
         <p className="jobPoints">
-          <li>Improved average repository build times by over <b>2x</b> by implementing <b>build caching</b> using <b>Docker layers</b>.</li>
+          <li>Improved average repository build times by over <b>2x</b> by implementing <b>build caching</b> using <b>Docker layers.</b></li>
           <li>Direct-to-cloud video export <b>streaming</b> via a <b>FIFO</b> resulting in a <b>13% faster</b> export & upload process.</li>
           <li>Implemented a <b>FUSE</b> (Filesystem in Userspace) to tweak <b>FFMPEG's</b> process of writing video files.</li>
           <li>Slashed video upload times by over <b>6x</b> to <b>Azure blob storage</b> by <b>chunking</b> & <b>parallelizing</b> file uploads.</li>
@@ -114,12 +114,12 @@ function Experience() {
       </header>
       <div className="jobDesc">
         <p className="jobSkills">
-          Used: Python, spaCy, transformer models.
+          Used: Python, spaCy, transformer models
         </p>
         <p className="jobPoints">
-          <li>Spearheaded NoteFlow, an <b>AI based</b> summarizer using <b>spaCy pipelines</b>, <b>T5 tranformers</b>, and the <b>TextRank</b> algorithm.</li>
+          <li>Spearheaded NoteFlow, an <b>AI based</b> summarizer using <b>spaCy pipelines</b>, <b>T5 transformers</b>, and the <b>TextRank</b> algorithm.</li>
           <li>Contribute to, while also <b>managing</b> and <b>overseeing</b> the development of <i>NoteFlow</i>.</li>
-          <li>Present <i>NoteFlow</i> at <b>CUCAI 2024</b> (Canadian Undergraduate Conference for AI) in Kingston, Ontario</li>
+          <li>Present <i>NoteFlow</i> at <b>CUCAI 2024</b> (Canadian Undergraduate Conference for AI) in Kingston, Ontario.</li>
         </p>
       </div>
       <header>
@@ -128,7 +128,7 @@ function Experience() {
       </header>
       <div className="jobDesc">
         <p className="jobSkills">
-          Used: Leadership, Organization, Hiring.
+          Used: Leadership, Organization, Hiring
         </p>
         <p className="jobPoints">
           <li><b>Interviewing</b>, <b>hiring</b> and <b>on-boarding</b> Team Leads for the 2024-25 season.</li>
@@ -142,11 +142,11 @@ function Experience() {
       </header>
       <div className="jobDesc">
         <p className="jobSkills">
-          Used: IT Systems, Operating Systems, IT Protocols.
+          Used: IT Systems, Operating Systems, IT Protocols
         </p>
         <p className="jobPoints">
           <li><b>Standardized</b> Operating Systems and programs installed on all computers.</li>
-          <li>Created new procedures for computer on-boarding, increasing efficiency of setup by <b>3x.</b></li>
+          <li>Created new procedures for computer on-boarding, increasing efficiency of setup by <b>3x</b>.</li>
           <li>Integrated <b>novel devices</b> into the system & <b>created surrounding protocol</b>.</li>
         </p>
       </div>
@@ -175,7 +175,7 @@ function ProjectGAC({ projectId }) {
   return (
     <>
       <header className="projectHeader">
-        <a className="projectTitle" href="https://github.com/MFactor1/git-auto-commiter" target="_blank">GAC (git-auto-commiter)</a>
+        <a className="projectTitle" href="https://github.com/MFactor1/git-auto-commiter" target="_blank">GAC (git-auto-committer)</a>
         <p className="projectSkills">Used: Python, gevent, rpm, dpkg</p>
       </header>
       <p className="projectSummary">
@@ -225,13 +225,16 @@ function ProjectAccCom({ projectId }) {
       <Collapsible isExpanded={isExpanded}>
         <div className="projectDesc">
           <p className="projectDescFirstLine">
-            When my aunt had a severe stroke during a routine surgery, she was unable to speak or communicate during the
-            early phases of her recovery. During a visit, I realized I could be leveraging my skills to allow her to
-            communicate basic needs, and even complex ideas. In <b>under a week</b>, while also balancing school, I had
-            ClearSignal up and running on their laptop as a <b>redistributable EXE</b>. ClearSignal uses a small
-            keypad (3 keys) with each key textured differently to interact with the interface and allow the user to activate
-            one of three buttons (default yes, no, custom) as well as type on a virtual keyboard. All the colors and text
-            are easily and <b>fully customizable</b> by the user via the <b>INI file</b>.
+          During a routine surgery, my aunt suffered a severe stroke, leaving her unable to speak or communicate effectively
+          during the initial stages of her recovery. During a visit, I recognized an opportunity to leverage my skills to create a
+          solution that could help her express both basic needs and complex ideas. Within a week, while managing my academic
+          responsibilities, I developed ClearSignal— a redistributable application packaged as an executable file (EXE) and deployed on her laptop.
+          </p>
+          <p>
+          ClearSignal leverages a compact keypad with three distinctively textured keys to interface with its system. These keys
+          correspond to three customizable actions (defaulted to "Yes," "No," and "Custom") and provide access to a virtual keyboard
+          for typing. The application offers full customization of colors and text through an easily editable INI file, ensuring adaptability
+          to individual user preferences and needs.
           </p>
         </div>
         <div className="imgPanel">
@@ -372,7 +375,7 @@ function Skills() {
           <b><i>Frameworks/Libraries:</i></b> React.JS, Node.JS, gevent, kivy, OpenCV, spaCy, JUnit, unittest.
         </p>
         <p className='skillItem'>
-          <b><i>Tools:</i></b> git, Linux, Docker, Jenkins, Jira, Azure Blob Storage, GCS, Amazon S3, rpm, dpkg, cron, Sonarqube.
+          <b><i>Tools:</i></b> git, Linux, Docker, Jenkins, Jira, Azure Blob Storage, GCS, Amazon S3, Make, rpm, dpkg, cron, Sonarqube.
         </p>
       </div>
     </>
