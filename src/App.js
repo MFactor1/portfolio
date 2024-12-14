@@ -414,7 +414,7 @@ export default function App() {
           <nav className="footerLinks">
             <a href="https://www.linkedin.com/in/matthewnesbitt8" target="_blank">-> LinkedIn</a>
             <a href="https://www.github.com/MFactor1" target="_blank">-> GitHub</a>
-            <a href="https://drive.google.com/file/d/1cCz7zdod6SZacBzv_R_7nnSdTf7U5JKC/view?usp=drive_link" target="_blank">-> Resume</a>
+            <a href="https://drive.google.com/file/d/1ToSrtCD4D2AOzss_RZWrOOEa_E64Ss63/view?usp=sharing" target="_blank">-> Resume</a>
           </nav>
           <div className="credits">
             <span>Matthew Nesbitt 2024</span>
