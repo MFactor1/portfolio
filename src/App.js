@@ -73,7 +73,7 @@ function Home() {
 	return (
 		<>
       <div className="homeimage">
-        <img src={pfp} alt="Portrait" style={{width: '15%', height: 'auto'}}/>
+        <img src={pfp} alt="Portrait" style={{maxHeight: '25vh', maxWidth: '60vw'}}/>
       </div>
 			<div className="bio">
 				<p>Hi, thanks for stopping by!</p>
@@ -242,8 +242,8 @@ function ProjectAccCom({ projectId }) {
           </p>
         </div>
         <div className="imgPanel">
-          <img src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{width: '20%', height: 'auto'}}/>
-          <img src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{width: '20%', height: 'auto'}}/>
+          <img src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
+          <img src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
         </div>
       </Collapsible>
       <span className="showMore" onClick={() => toggleProject(projectId)}>
@@ -277,7 +277,7 @@ function ProjectNoteFlow({ projectId }) {
           </p>
         </div>
         <div className="imgPanel">
-          <img src={noteflowdemo} alt="Summary demo using NoteFlow" style={{width: '60%', height: 'auto'}}/>
+          <img src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
         </div>
       </Collapsible>
       <span className="showMore" onClick={() => toggleProject(projectId)}>
@@ -325,8 +325,8 @@ function ProjectSpotify({ projectId }) {
           </p>
         </div>
         <div className="imgPanel">
-          <img src={stdemo1} alt="Demo of search function in Spotify Tools" style={{width: '13%', height: 'auto'}}/>
-          <img src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{width: '13%', height: 'auto'}}/>
+          <img src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+          <img src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
         </div>
       </Collapsible>
       <span className="showMore" onClick={() => toggleProject(projectId)}>
@@ -354,8 +354,8 @@ function ProjectHellHunter({ projectId }) {
       </div>
       <Collapsible isExpanded={isExpanded}>
         <div className="imgPanel">
-          <img src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{width: '30%', height: 'auto'}}/>
-          <img src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{width: '30%', height: 'auto'}}/>
+          <img src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+          <img src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
         </div>
       </Collapsible>
       <span className="showMore" onClick={() => toggleProject(projectId)}>
@@ -399,7 +399,7 @@ export default function App() {
             <Link to="/skills">-> Skills</Link>
           </nav>
         </header>
-        <main>
+        <main className="bodypages">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />

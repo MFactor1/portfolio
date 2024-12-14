@@ -18,7 +18,7 @@
 
 body {
 	font-family: Global, sans-serif;
-	margin: 80px;
+	margin: 80px 3vw;
 	font-size: 14px;
 	padding: 0;
 	height: 100%;
@@ -42,8 +42,11 @@ body::before {
 }
 
 .headerbar {
-	margin-left: -20px;
 	margin-bottom: 20px;
+}
+
+.bodypages {
+	margin-left: 20px;
 }
 
 .homeimage {
@@ -147,6 +150,10 @@ body::before {
 footer hr {
 	margin-top: 30px;
 	margin-bottom: 20px;
+}
+
+.footerContent {
+	margin-left: 10px;
 }
 
 .footerLinks a {
