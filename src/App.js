@@ -8,6 +8,7 @@ import stdemo2 from './assets/images/FilterDemo.gif'
 import noteflowdemo from './assets/images/noteflow_demo.webp'
 import hhdemo1 from './assets/images/GameplayShowcase.gif'
 import hhdemo2 from './assets/images/MenuShowcase.gif'
+import iedemo from './assets/images/Explorer.svg'
 
 const ProjectsContext = createContext();
 export const useProjectsState = () => useContext(ProjectsContext);
@@ -69,11 +70,33 @@ const Collapsible = ({ children, isExpanded, duration = 500 }) => {
   );
 };
 
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const isDeviceMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+
+    const handleResize = () => {
+      setIsMobile(isDeviceMobile && window.innerWidth < 1900);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+};
+
 function Home() {
+  const isMobile = useIsMobile();
+
 	return (
 		<>
       <div className="homeimage">
-        <img src={pfp} alt="Portrait" style={{maxHeight: '25vh', maxWidth: '60vw'}}/>
+        <img src={pfp} alt="Portrait" style={{maxHeight: '25vh', maxWidth: '60vw', display: "block", marginLeft: isMobile ? "auto" : "0px", marginRight: "auto"}}/>
       </div>
 			<div className="bio">
 				<p>Hi, thanks for stopping by!</p>
@@ -165,8 +188,10 @@ function Projects() {
       <ProjectGAC projectId='2'/>
       <ProjectNoteFlow projectId='3' />
       <ProjectPortfolio projectId='4' />
-      <ProjectSpotify projectId='5' />
-      <ProjectHellHunter projectId='6' />
+      <ProjectIslandExplorer projectId='5' />
+      <ProjectSpotify projectId='6' />
+      <ProjectHellHunter projectId='7' />
+      <ProjectMazeSolver projectId='8' />
     </ProjectsProvider>
   );
 }
@@ -180,10 +205,10 @@ function ProjectGAC({ projectId }) {
     <>
       <header className="projectHeader">
         <a className="projectTitle" href="https://github.com/MFactor1/git-auto-commiter" target="_blank">GAC (git-auto-committer)</a>
-        <p className="projectSkills">Used: Python, gevent, rpm, dpkg</p>
+        <p className="projectSkills">Built With: Python, gevent, rpm, dpkg</p>
       </header>
       <p className="projectSummary">
-        Powerful, automated, repository management. Hidden behind a simple CLI.
+        Powerful, automated, repository management. Hidden behind a simple <b>CLI</b>.
       </p>
       <Collapsible isExpanded={isExpanded}>
         <div className="projectDesc">
@@ -221,7 +246,7 @@ function ProjectAccCom({ projectId }) {
     <>
       <header className="projectHeader">
         <a className="projectTitle" href="https://github.com/MFactor1/accessibility-communicator" target="_blank">ClearSignal</a>
-        <p className="projectSkills">Used: Python, kivy</p>
+        <p className="projectSkills">Built With: Python, kivy</p>
       </header>
       <p className="projectSummary">
         Making communication more accessible for those in their <b>greatest time of need</b>.
@@ -262,7 +287,7 @@ function ProjectNoteFlow({ projectId }) {
     <>
       <header className="projectHeader">
         <a className="projectTitle" href="https://github.com/McMasterAI/NoteFlow" target="_blank">NoteFlow</a>
-        <p className="projectSkills">Used: Python, spaCy, TextRank Algorithm, open source transformer models</p>
+        <p className="projectSkills">Built With: Python, spaCy, TextRank Algorithm, open source transformer models</p>
       </header>
       <p className="projectSummary">
         Intelligent, offline, text summarization. Created as a part of McMaster AI Society; presented at CUCAI 2024.
@@ -292,7 +317,7 @@ function ProjectPortfolio({ projectId }) {
     <>
       <header className="projectHeader">
         <a className="projectTitle" href="https://github.com/MFactor1/portfolio" target="_blank">Portfolio (This one!)</a>
-        <p className="projectSkills">Used: JavaScript, React.JS, HTML/CSS, Node.JS</p>
+        <p className="projectSkills">Built With: JavaScript, React.JS, HTML/CSS, Node.JS</p>
       </header>
       <div className="projectDesc">
         <p>
@@ -311,7 +336,7 @@ function ProjectSpotify({ projectId }) {
     <>
       <header className="projectHeader">
         <p className="projectTitleNoLink">Spotify Tools</p>
-        <p className="projectSkills">Used: Python, kivy</p>
+        <p className="projectSkills">Built With: Python, kivy, Spotify API</p>
       </header>
       <p className="projectSummary">
         Automated playlist creation with search and filters.
@@ -345,7 +370,7 @@ function ProjectHellHunter({ projectId }) {
     <>
       <header className="projectHeader">
         <p className="projectTitleNoLink">Hell's Hunters</p>
-        <p className="projectSkills">Used: Python, pyglet</p>
+        <p className="projectSkills">Built With: Python, pyglet</p>
       </header>
       <div className="projectDesc">
         <p>
@@ -361,6 +386,54 @@ function ProjectHellHunter({ projectId }) {
       <span className="showMore" onClick={() => toggleProject(projectId)}>
         {isExpanded ? 'Show Less' : '-> Show More'}
       </span>
+    </>
+  );
+}
+
+function ProjectIslandExplorer({ projectId }) {
+  const { expandedProject, toggleProject } = useProjectsState();
+
+  const isExpanded = expandedProject === projectId;
+
+  return (
+    <>
+      <header className="projectHeader">
+        <a className="projectTitle" href='https://github.com/2AA4-W24/a2-rescue-mission-team-103' target='_blank'>Island Explorer</a>
+        <p className="projectSkills">Built With: Java, JUnit, Maven, Sonarqube</p>
+      </header>
+      <div className="projectDesc">
+        <p>
+          An automated rescue drone built in Java that searches an island for survivors, developed in a simulation with randomly generated islands.
+        </p>
+      </div>
+      <Collapsible isExpanded={isExpanded}>
+        <div className="imgPanel">
+          <img src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
+        </div>
+      </Collapsible>
+      <span className="showMore" onClick={() => toggleProject(projectId)}>
+        {isExpanded ? 'Show Less' : '-> Show More'}
+      </span>
+    </>
+  );
+}
+
+function ProjectMazeSolver({ projectId }) {
+  const { expandedProject, toggleProject } = useProjectsState();
+
+  const isExpanded = expandedProject === projectId;
+
+  return (
+    <>
+      <header className="projectHeader">
+        <a className="projectTitle" href='https://github.com/2AA4-W24/a3-maze-runner-take-two-MFactor1' target='_blank'>Maze Solver</a>
+        <p className="projectSkills">Built With: Java, JUnit, Maven, Sonarqube</p>
+      </header>
+      <div className="projectDesc">
+        <p>
+          An automated maze solver built in Java with the choice between a graph-based DFS algorithm, and a primitive right-hand algorithm.
+        </p>
+      </div>
     </>
   );
 }
@@ -387,12 +460,14 @@ function Skills() {
 }
 
 export default function App() {
+  const isMobile = useIsMobile();
+
   return (
     <>
       <Router>
         <header className="headerbar">
-          <h1 className="title">Matthew Nesbitt</h1>
-          <nav className="navbar">
+          <h1 className="title" style={{ textAlign: isMobile ? "center" : "left" }}>Matthew Nesbitt</h1>
+          <nav className="navbar" style={{ display: "flex", flexDirection: isMobile ? "column" : "row", textAlign: isMobile ? "center" : "left"}}>
             <Link to="/">-> Home</Link>
             <Link to="/experience">-> Experience</Link>
             <Link to="/projects">-> Projects</Link>
