@@ -317,7 +317,7 @@ function ProjectPortfolio({ projectId }) {
     <>
       <header className="projectHeader">
         <a className="projectTitle" href="https://github.com/MFactor1/portfolio" target="_blank">Portfolio (This one!)</a>
-        <p className="projectSkills">Built With: JavaScript, React.JS, HTML/CSS, Node.JS</p>
+        <p className="projectSkills">Built With: JavaScript, React.JS, HTML/CSS</p>
       </header>
       <div className="projectDesc">
         <p>
@@ -449,7 +449,7 @@ function Skills() {
           <b><i>Languages:</i></b> Python, Java, JavaScript, C/C++, Bash Script, SQL, HTML/CSS, LaTeX.
         </p>
         <p className='skillItem'>
-          <b><i>Frameworks/Libraries:</i></b> React.JS, Node.JS, gevent, kivy, OpenCV, spaCy, JUnit, unittest.
+          <b><i>Frameworks/Libraries:</i></b> React.JS, gevent, kivy, OpenCV, spaCy, Node.JS, JUnit, unittest.
         </p>
         <p className='skillItem'>
           <b><i>Tools:</i></b> git, Linux, Docker, Jenkins, Jira, MS Office, Azure Blob Storage, GCS, Amazon S3, Make, rpm, dpkg, UML, Sonarqube.
