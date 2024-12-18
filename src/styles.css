@@ -45,12 +45,13 @@ body::before {
 	margin-bottom: 20px;
 }
 
-.bodypages {
-	margin-left: 20px;
-}
-
 .homeimage {
-	margin-top: 40px;
+	display: flex;
+	justify-content: center;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 100%;
+	padding: 0px;
 }
 
 .bio {
@@ -72,7 +73,6 @@ body::before {
 }
 
 .navbar a {
-	margin-right: 20px;
 	color: #ffffff;
 	text-decoration: none;
 	font-family: GlobalItalic;

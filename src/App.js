@@ -95,7 +95,7 @@ function Home() {
 
 	return (
 		<>
-      <div className="homeimage">
+      <div className="homeimage" style={{marginTop: isMobile ? "0px" : "40px"}}>
         <img src={pfp} alt="Portrait" style={{maxHeight: '25vh', maxWidth: '60vw', display: "block", marginLeft: isMobile ? "auto" : "0px", marginRight: "auto"}}/>
       </div>
 			<div className="bio">
@@ -468,13 +468,13 @@ export default function App() {
         <header className="headerbar">
           <h1 className="title" style={{ textAlign: isMobile ? "center" : "left" }}>Matthew Nesbitt</h1>
           <nav className="navbar" style={{ display: "flex", flexDirection: isMobile ? "column" : "row", textAlign: isMobile ? "center" : "left"}}>
-            <Link to="/">-> Home</Link>
-            <Link to="/experience">-> Experience</Link>
-            <Link to="/projects">-> Projects</Link>
-            <Link to="/skills">-> Skills</Link>
+            <Link to="/" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Home</Link>
+            <Link to="/experience" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Experience</Link>
+            <Link to="/projects" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Projects</Link>
+            <Link to="/skills" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Skills</Link>
           </nav>
         </header>
-        <main className="bodypages">
+        <main className="bodypages" style={{ marginLeft: isMobile ? "0px" : "20px" }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/experience" element={<Experience />} />
