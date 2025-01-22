@@ -147,6 +147,25 @@ body::before {
 	text-decoration: Underline;
 }
 
+.readingsDesc {
+	margin-top: 30px;
+	font-family: GlobalItalic;
+}
+
+.readingsHeaders {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 16.3px;
+	font-weight: bold;
+}
+
+.bookDesc {
+	margin-left: 15px;
+	margin-top: 5px;
+}
+
 footer hr {
 	margin-top: 30px;
 	margin-bottom: 20px;

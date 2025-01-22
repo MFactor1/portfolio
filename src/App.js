@@ -1,25 +1,14 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { createContext, useContext, useState, useRef, useEffect} from 'react';
 
-import pfp from './assets/images/WebsitePfp.png'
-import ascomdemo1 from './assets/images/buttons.gif'
-import ascomdemo2 from './assets/images/keyboard.gif'
-import stdemo1 from './assets/images/SearchDemo.gif'
-import stdemo2 from './assets/images/FilterDemo.gif'
-import noteflowdemo from './assets/images/noteflow_demo.webp'
-import hhdemo1 from './assets/images/GameplayShowcase.gif'
-import hhdemo2 from './assets/images/MenuShowcase.gif'
-import iedemo from './assets/images/Explorer.svg'
 import resume from './assets/Resume.pdf'
 
 import useIsMobile from './components/IsMobile'
-import Collapsible from './components/Collapsible'
-import {useProjectsState, ProjectsProvider} from './components/ProjectsContext'
 
 import Home from './pages/Home'
 import Experience from './pages/Experience'
 import Projects from './pages/Projects'
 import Skills from './pages/Skills'
+import Readings from './pages/Readings'
 
 export default function App() {
   const isMobile = useIsMobile();
@@ -34,6 +23,7 @@ export default function App() {
             <Link to="/experience" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Experience</Link>
             <Link to="/projects" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Projects</Link>
             <Link to="/skills" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Skills</Link>
+            <Link to="/readings" style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Readings</Link>
           </nav>
         </header>
         <main className="bodypages" style={{ marginLeft: isMobile ? "0px" : "20px" }}>
@@ -42,6 +32,7 @@ export default function App() {
             <Route path="/experience" element={<Experience />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/readings" element={<Readings />} />
           </Routes>
         </main>
       </Router>
