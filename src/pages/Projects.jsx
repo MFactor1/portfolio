@@ -7,7 +7,7 @@ import stdemo2 from '../assets/images/FilterDemo.gif'
 import noteflowdemo from '../assets/images/noteflow_demo.webp'
 import hhdemo1 from '../assets/images/GameplayShowcase.gif'
 import hhdemo2 from '../assets/images/MenuShowcase.gif'
-import iedemo from '../assets/images/Explorer.svg'
+import iedemo from '../assets/images/Explorer.png'
 
 import Collapsible from '../components/Collapsible'
 import {useProjectsState, ProjectsProvider} from '../components/ProjectsContext'
