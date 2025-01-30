@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react"
 
 import resume from './assets/Resume.pdf'
 
@@ -50,6 +51,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+      <Analytics />
     </>
   );
 }
