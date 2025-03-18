@@ -42,9 +42,9 @@ export default function App() {
         <hr />
         <div className="footerContent">
           <nav className="footerLinks">
-            <a href="https://www.linkedin.com/in/matthewnesbitt8" target="_blank">-> LinkedIn</a>
-            <a href="https://www.github.com/MFactor1" target="_blank">-> GitHub</a>
-            <a href={resume} download="Resume.pdf">-> Resume</a>
+            <a href="https://www.linkedin.com/in/matthewnesbitt8" target="_blank">{"->"} LinkedIn</a>
+            <a href="https://www.github.com/MFactor1" target="_blank">{"->"} GitHub</a>
+            <a href={resume} download="Resume.pdf">{"->"} Resume</a>
           </nav>
           <div className="credits">
             <span>Matthew Nesbitt 2024</span>
