@@ -1,6 +1,8 @@
 import React from 'react'
 import { createContext, useContext, useState, useRef, useEffect} from 'react';
 
+import { ForceScrollUpdateForDuration } from './ForceScrollUpdate';
+
 export default function Collapsible({ children, isExpanded, duration = 500 }) {
   const contentRef = useRef(null);
 
@@ -25,6 +27,8 @@ export default function Collapsible({ children, isExpanded, duration = 500 }) {
   useEffect(() => {
     if (contentRef.current) {
       contentRef.current.style.maxHeight = isExpanded ? `${contentRef.current.scrollHeight}px` : '0px';
+      ForceScrollUpdateForDuration(duration); // Repeatedly forces useScroll() updates since it does not
+                                              //update on its own during layout changes
     }
   }, [isExpanded, contentHeight]);
 
