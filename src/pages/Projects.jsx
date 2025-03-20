@@ -118,12 +118,12 @@ function ProjectAccCom({ projectId }) {
             </p>
           </ScrollFade>
         </div>
-        <div className="imgPanel">
-          <ScrollFade>
+        <ScrollFade>
+          <div className="imgPanel">
             <img src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
-          </ScrollFade>
-          <img src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
-        </div>
+            <img src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
+          </div>
+        </ScrollFade>
       </Collapsible>
       <ScrollFade>
         <span className="showMore" onClick={() => toggleProject(projectId)}>
@@ -141,29 +141,39 @@ function ProjectNoteFlow({ projectId }) {
 
   return (
     <>
-      <header className="projectHeader">
-        <a className="projectTitle" href="https://github.com/McMasterAI/NoteFlow" target="_blank">NoteFlow</a>
-        <p className="projectSkills">Built With: Python, spaCy, TextRank Algorithm, open source transformer models</p>
-      </header>
-      <p className="projectSummary">
-        Intelligent, offline, text summarization. Created as a part of McMaster AI Society; presented at CUCAI 2024.
-      </p>
+      <ScrollFade>
+        <header className="projectHeader">
+          <a className="projectTitle" href="https://github.com/McMasterAI/NoteFlow" target="_blank">NoteFlow</a>
+          <p className="projectSkills">Built With: Python, spaCy, TextRank Algorithm, open source transformer models</p>
+        </header>
+      </ScrollFade>
+      <ScrollFade>
+        <p className="projectSummary">
+          Intelligent, offline, text summarization. Created as a part of McMaster AI Society; presented at CUCAI 2024.
+        </p>
+      </ScrollFade>
       <Collapsible isExpanded={isExpanded}>
-        <div className="projectDesc">
-          <p className="projectDescFirstLine">
-            NoteFlow was my brain-child during my time as Team Lead at McMaster AI Society. It is an <b>entirely offline</b> text
-            summarizer targeted at students in order to help create personal notes, cheat sheets, and parse through textbooks.
-            The primary differentiating factor for NoteFlow was its ability to run entirely offline, which gives it <b>unparalleled
-            reliability</b> when a connection is uncertain, and total data privacy as <b>no data ever leaves your device.</b>
-          </p>
-        </div>
-        <div className="imgPanel">
-          <img src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
-        </div>
+        <ScrollFade>
+          <div className="projectDesc">
+            <p className="projectDescFirstLine">
+              NoteFlow was my brain-child during my time as Team Lead at McMaster AI Society. It is an <b>entirely offline</b> text
+              summarizer targeted at students in order to help create personal notes, cheat sheets, and parse through textbooks.
+              The primary differentiating factor for NoteFlow was its ability to run entirely offline, which gives it <b>unparalleled
+              reliability</b> when a connection is uncertain, and total data privacy as <b>no data ever leaves your device.</b>
+            </p>
+          </div>
+        </ScrollFade>
+        <ScrollFade>
+          <div className="imgPanel">
+            <img src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
+          </div>
+        </ScrollFade>
       </Collapsible>
-      <span className="showMore" onClick={() => toggleProject(projectId)}>
-        {isExpanded ? 'Show Less' : '-> Show More'}
-      </span>
+      <ScrollFade>
+        <span className="showMore" onClick={() => toggleProject(projectId)}>
+          {isExpanded ? 'Show Less' : '-> Show More'}
+        </span>
+      </ScrollFade>
     </>
   );
 }
@@ -177,11 +187,13 @@ function ProjectPortfolio({ projectId }) {
           <p className="projectSkills">Built With: JavaScript, React.JS, HTML/CSS</p>
         </header>
       </ScrollFade>
-      <div className="projectDesc">
-        <p>
-          Showcasing my experience, projects, and skills.
-        </p>
-      </div>
+      <ScrollFade>
+        <div className="projectDesc">
+          <p>
+            Showcasing my experience, projects, and skills.
+          </p>
+        </div>
+      </ScrollFade>
     </>
   );
 }
@@ -192,29 +204,39 @@ function ProjectSpotify({ projectId }) {
   const isExpanded = expandedProject === projectId;
   return (
     <>
-      <header className="projectHeader">
-        <p className="projectTitleNoLink">Spotify Tools</p>
-        <p className="projectSkills">Built With: Python, kivy, Spotify API</p>
-      </header>
-      <p className="projectSummary">
-        Automated playlist creation with search and filters.
-      </p>
+      <ScrollFade>
+        <header className="projectHeader">
+          <p className="projectTitleNoLink">Spotify Tools</p>
+          <p className="projectSkills">Built With: Python, kivy, Spotify API</p>
+        </header>
+      </ScrollFade>
+      <ScrollFade>
+        <p className="projectSummary">
+          Automated playlist creation with search and filters.
+        </p>
+      </ScrollFade>
       <Collapsible isExpanded={isExpanded}>
-        <div className="projectDesc">
-          <p className="projectDescFirstLine">
-            Spotify Playlist Tools is an integration with the Spotify API written in Python using the Kivy GUI library.
-            It allows users to automate playlist creation for their favorite artists, while having the option to filter out
-            potentially unwanted types of songs.
-          </p>
-        </div>
-        <div className="imgPanel">
-          <img src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
-          <img src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
-        </div>
+        <ScrollFade>
+          <div className="projectDesc">
+            <p className="projectDescFirstLine">
+              Spotify Playlist Tools is an integration with the Spotify API written in Python using the Kivy GUI library.
+              It allows users to automate playlist creation for their favorite artists, while having the option to filter out
+              potentially unwanted types of songs.
+            </p>
+          </div>
+        </ScrollFade>
+        <ScrollFade>
+          <div className="imgPanel">
+            <img src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+          </div>
+        </ScrollFade>
       </Collapsible>
-      <span className="showMore" onClick={() => toggleProject(projectId)}>
-        {isExpanded ? 'Show Less' : '-> Show More'}
-      </span>
+      <ScrollFade>
+        <span className="showMore" onClick={() => toggleProject(projectId)}>
+          {isExpanded ? 'Show Less' : '-> Show More'}
+        </span>
+      </ScrollFade>
     </>
   );
 }
@@ -232,20 +254,26 @@ function ProjectHellHunter({ projectId }) {
           <p className="projectSkills">Built With: Python, pyglet</p>
         </header>
       </ScrollFade>
-      <div className="projectDesc">
-        <p>
-          A simplistic, highscore-based, 2D arcade-style game. Highschool CS Project.
-        </p>
-      </div>
-      <Collapsible isExpanded={isExpanded}>
-        <div className="imgPanel">
-          <img src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
-          <img src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+      <ScrollFade>
+        <div className="projectDesc">
+          <p>
+            A simplistic, highscore-based, 2D arcade-style game. Highschool CS Project.
+          </p>
         </div>
+      </ScrollFade>
+      <Collapsible isExpanded={isExpanded}>
+        <ScrollFade>
+          <div className="imgPanel">
+            <img src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+            <img src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+          </div>
+        </ScrollFade>
       </Collapsible>
-      <span className="showMore" onClick={() => toggleProject(projectId)}>
-        {isExpanded ? 'Show Less' : '-> Show More'}
-      </span>
+      <ScrollFade>
+        <span className="showMore" onClick={() => toggleProject(projectId)}>
+          {isExpanded ? 'Show Less' : '-> Show More'}
+        </span>
+      </ScrollFade>
     </>
   );
 }
@@ -257,23 +285,31 @@ function ProjectIslandExplorer({ projectId }) {
 
   return (
     <>
-      <header className="projectHeader">
-        <a className="projectTitle" href='https://github.com/2AA4-W24/a2-rescue-mission-team-103' target='_blank'>Island Explorer</a>
-        <p className="projectSkills">Built With: Java, JUnit, Maven, Sonarqube</p>
-      </header>
-      <div className="projectDesc">
-        <p>
-          An automated rescue drone built in Java that searches an island for survivors, developed in a simulation with randomly generated islands.
-        </p>
-      </div>
-      <Collapsible isExpanded={isExpanded}>
-        <div className="imgPanel">
-          <img src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
+      <ScrollFade>
+        <header className="projectHeader">
+          <a className="projectTitle" href='https://github.com/2AA4-W24/a2-rescue-mission-team-103' target='_blank'>Island Explorer</a>
+          <p className="projectSkills">Built With: Java, JUnit, Maven, Sonarqube</p>
+        </header>
+      </ScrollFade>
+      <ScrollFade>
+        <div className="projectDesc">
+          <p>
+            An automated rescue drone built in Java that searches an island for survivors, developed in a simulation with randomly generated islands.
+          </p>
         </div>
+      </ScrollFade>
+      <Collapsible isExpanded={isExpanded}>
+        <ScrollFade>
+          <div className="imgPanel">
+            <img src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
+          </div>
+        </ScrollFade>
       </Collapsible>
-      <span className="showMore" onClick={() => toggleProject(projectId)}>
-        {isExpanded ? 'Show Less' : '-> Show More'}
-      </span>
+      <ScrollFade>
+        <span className="showMore" onClick={() => toggleProject(projectId)}>
+          {isExpanded ? 'Show Less' : '-> Show More'}
+        </span>
+      </ScrollFade>
     </>
   );
 }
@@ -285,15 +321,19 @@ function ProjectMazeSolver({ projectId }) {
 
   return (
     <>
-      <header className="projectHeader">
-        <a className="projectTitle" href='https://github.com/2AA4-W24/a3-maze-runner-take-two-MFactor1' target='_blank'>Maze Solver</a>
-        <p className="projectSkills">Built With: Java, JUnit, Maven, Sonarqube</p>
-      </header>
-      <div className="projectDesc">
-        <p>
-          An automated maze solver built in Java with the choice between a graph-based DFS algorithm, and a primitive right-hand algorithm.
-        </p>
-      </div>
+      <ScrollFade>
+        <header className="projectHeader">
+          <a className="projectTitle" href='https://github.com/2AA4-W24/a3-maze-runner-take-two-MFactor1' target='_blank'>Maze Solver</a>
+          <p className="projectSkills">Built With: Java, JUnit, Maven, Sonarqube</p>
+        </header>
+      </ScrollFade>
+      <ScrollFade>
+        <div className="projectDesc">
+          <p>
+            An automated maze solver built in Java with the choice between a graph-based DFS algorithm, and a primitive right-hand algorithm.
+          </p>
+        </div>
+      </ScrollFade>
     </>
   );
 }

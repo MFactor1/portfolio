@@ -3,6 +3,7 @@ import React from 'react'
 export default function Skills() {
   return (
     <>
+      <div style = {{ position: 'absolute', height: '101vh', width: '10vw', top: '0px', left: '0px' }}></div>
       <div>
         <p className='skillsTitle'>
           What we're working with:
