@@ -67,9 +67,9 @@ export default function App() {
             <div className="footerContent">
               <ScrollFade>
                 <nav className="footerLinks">
-                  <a href="https://www.linkedin.com/in/matthewnesbitt8" target="_blank">-> LinkedIn</a>
-                  <a href="https://www.github.com/MFactor1" target="_blank">-> GitHub</a>
-                  <a href={resume} download="Resume.pdf">-> Resume</a>
+                  <a href="https://www.linkedin.com/in/matthewnesbitt8" target="_blank">{"->"} LinkedIn</a>
+                  <a href="https://www.github.com/MFactor1" target="_blank">{"->"} GitHub</a>
+                  <a href={resume} download="Resume.pdf">{"->"} Resume</a>
                 </nav>
               </ScrollFade>
               <ScrollFade>
