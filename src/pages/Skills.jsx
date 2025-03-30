@@ -13,12 +13,12 @@ export default function Skills() {
         </ScrollFade>
         <ScrollFade>
           <p className='skillItem'>
-            <b><i>Languages:</i></b> Python, Java, JavaScript, C/C++, Bash Script, SQL, HTML/CSS, LaTeX.
+            <b><i>Languages:</i></b> Python, Java, TypeScript/JavaScript, C/C++, Bash Script, SQL, HTML/CSS, LaTeX.
           </p>
         </ScrollFade>
         <ScrollFade>
           <p className='skillItem'>
-            <b><i>Frameworks/Libraries:</i></b> React.JS, gevent, kivy, OpenCV, spaCy, Node.JS, JUnit, unittest.
+            <b><i>Frameworks/Libraries:</i></b> React.JS, gevent, Expo, framer-motion, kivy, OpenCV, spaCy, Node.JS, JUnit, unittest.
           </p>
         </ScrollFade>
         <ScrollFade>

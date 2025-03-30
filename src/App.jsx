@@ -27,19 +27,19 @@ export default function App() {
           </ScrollFade>
           <nav className="navbar" style={{ display: "flex", flexDirection: isMobile ? "column" : "row", textAlign: isMobile ? "center" : "left"}}>
             <ScrollFade>
-              <Link to="/" onClick={() => setTimeout(ForceScrollUpdate, 50)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Home</Link>
+              <Link to="/" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Home</Link>
             </ScrollFade>
             <ScrollFade>
-              <Link to="/experience" onClick={() => setTimeout(ForceScrollUpdate, 50)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Experience</Link>
+              <Link to="/experience" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Experience</Link>
             </ScrollFade>
             <ScrollFade>
-              <Link to="/projects" onClick={() => setTimeout(ForceScrollUpdate, 50)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Projects</Link>
+              <Link to="/projects" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Projects</Link>
             </ScrollFade>
             <ScrollFade>
-              <Link to="/skills" onClick={() => setTimeout(ForceScrollUpdate, 50)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Skills</Link>
+              <Link to="/skills" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Skills</Link>
             </ScrollFade>
             <ScrollFade>
-              <Link to="/readings" onClick={() => setTimeout(ForceScrollUpdate, 50)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Readings</Link>
+              <Link to="/readings" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Readings</Link>
             </ScrollFade>
           </nav>
         </header>

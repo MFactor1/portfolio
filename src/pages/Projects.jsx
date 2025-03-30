@@ -8,6 +8,8 @@ import noteflowdemo from '../assets/images/noteflow_demo.webp'
 import hhdemo1 from '../assets/images/GameplayShowcase.gif'
 import hhdemo2 from '../assets/images/MenuShowcase.gif'
 import iedemo from '../assets/images/Explorer.png'
+import geolens1 from '../assets/images/GeoLensLogin.gif'
+import geolens2 from '../assets/images/GeoLensDetermination.png'
 
 import Collapsible from '../components/Collapsible'
 import ScrollFade from '../components/ScrollFade'
@@ -16,6 +18,8 @@ import {useProjectsState, ProjectsProvider} from '../components/ProjectsContext'
 export default function Projects() {
   return (
     <ProjectsProvider>
+      <ProjectGeoLens projectId='9' />
+      <ProjectAccCom projectId='1' />
       <ProjectGAC projectId='2'/>
       <ProjectNoteFlow projectId='3' />
       <ProjectPortfolio projectId='4' />
@@ -23,8 +27,51 @@ export default function Projects() {
       <ProjectSpotify projectId='6' />
       <ProjectHellHunter projectId='7' />
       <ProjectMazeSolver projectId='8' />
-      <ProjectAccCom projectId='1' />
     </ProjectsProvider>
+  );
+}
+
+function ProjectGeoLens({ projectId }) {
+  const { expandedProject, toggleProject } = useProjectsState();
+
+  const isExpanded = expandedProject === projectId;
+
+  return (
+    <>
+      <ScrollFade>
+        <header className="projectHeader">
+          <a className="projectTitle" href="https://github.com/MFactor1/GeoLensExpo" target="_blank">GeoLens</a>
+          <p className="projectSkills">Built With: React-Native, Expo, TypeScript, Firebase</p>
+        </header>
+      </ScrollFade>
+      <ScrollFade>
+        <p className="projectSummary">
+          Find a place, anywhere in the world, only based on image data.
+        </p>
+      </ScrollFade>
+      <Collapsible isExpanded={isExpanded}>
+        <div className="projectDesc">
+          <ScrollFade>
+            <p className="projectDescFirstLine">
+              GeoLens aims to allow users to find the origin location of an image without any additional context. Behind a clean, react-native front end,
+              it uses a Blackboard architecture style to consolidate the results of various methods, ranging from <a href="https://github.com/shokiami/GeoKnowr" target="_blank">GeoKnowr</a>
+              , an AI trained on <a href="https://en.wikipedia.org/wiki/GeoGuessr" target="_blank">GeoGuessr</a> data, to specific landmark recognition.
+            </p>
+          </ScrollFade>
+        </div>
+        <ScrollFade>
+          <div className="imgPanel">
+            <img className="displayImage" src={geolens1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={geolens2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+          </div>
+        </ScrollFade>
+      </Collapsible>
+      <ScrollFade>
+        <span className="showMore" onClick={() => toggleProject(projectId)}>
+          {isExpanded ? 'Show Less' : '-> Show More'}
+        </span>
+      </ScrollFade>
+    </>
   );
 }
 
@@ -120,8 +167,8 @@ function ProjectAccCom({ projectId }) {
         </div>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
-            <img src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -165,7 +212,7 @@ function ProjectNoteFlow({ projectId }) {
         </ScrollFade>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
+            <img className="displayImage" src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -184,7 +231,7 @@ function ProjectPortfolio({ projectId }) {
       <ScrollFade>
         <header className="projectHeader">
           <a className="projectTitle" href="https://github.com/MFactor1/portfolio" target="_blank">Portfolio (This one!)</a>
-          <p className="projectSkills">Built With: JavaScript, React.JS, HTML/CSS</p>
+          <p className="projectSkills">Built With: JavaScript, React.JS, framer-motion, HTML/CSS</p>
         </header>
       </ScrollFade>
       <ScrollFade>
@@ -227,8 +274,8 @@ function ProjectSpotify({ projectId }) {
         </ScrollFade>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
-            <img src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -264,8 +311,8 @@ function ProjectHellHunter({ projectId }) {
       <Collapsible isExpanded={isExpanded}>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
-            <img src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -301,7 +348,7 @@ function ProjectIslandExplorer({ projectId }) {
       <Collapsible isExpanded={isExpanded}>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
+            <img className="displayImage" src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>

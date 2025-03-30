@@ -21,7 +21,7 @@ export default function Readings() {
       </ScrollFade>
       <ScrollFade>
         <div className="imgPanel">
-          <img src={isMathReal} alt="Cover of 'Is Math Real' by Eugenia Cheng" style={{ maxHeight: '33vh', maxWidth: '90vw', display: "block", marginLeft: isMobile ? "auto" : "0px", marginRight: "auto" }}/>
+          <img className="displayImage" src={isMathReal} alt="Cover of 'Is Math Real' by Eugenia Cheng" style={{ maxHeight: '33vh', maxWidth: '90vw', display: "block", marginLeft: isMobile ? "auto" : "0px", marginRight: "auto" }}/>
         </div>
       </ScrollFade>
       <ScrollFade>
@@ -41,7 +41,7 @@ export default function Readings() {
       </ScrollFade>
       <ScrollFade>
         <div className="imgPanel">
-          <img src={humansHistory} alt="Cover of 'Is Math Real' by Eugenia Cheng" style={{ maxHeight: '33vh', maxWidth: '90vw', display: "block", marginLeft: isMobile ? "auto" : "0px", marginRight: "auto" }}/>
+          <img className="displayImage" src={humansHistory} alt="Cover of 'Is Math Real' by Eugenia Cheng" style={{ maxHeight: '33vh', maxWidth: '90vw', display: "block", marginLeft: isMobile ? "auto" : "0px", marginRight: "auto" }}/>
         </div>
       </ScrollFade>
       <ScrollFade>
