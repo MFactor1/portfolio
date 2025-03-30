@@ -61,8 +61,8 @@ function ProjectGeoLens({ projectId }) {
         </div>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={geolens1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
-            <img src={geolens2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={geolens1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={geolens2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -167,8 +167,8 @@ function ProjectAccCom({ projectId }) {
         </div>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
-            <img src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={ascomdemo1} alt="Buttons in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={ascomdemo2} alt="Keyboard in Accessibility Communicator" style={{maxHeight: '25vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -212,7 +212,7 @@ function ProjectNoteFlow({ projectId }) {
         </ScrollFade>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
+            <img className="displayImage" src={noteflowdemo} alt="Summary demo using NoteFlow" style={{maxHeight: '33vh', maxWidth: '90vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -274,8 +274,8 @@ function ProjectSpotify({ projectId }) {
         </ScrollFade>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
-            <img src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={stdemo1} alt="Demo of search function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={stdemo2} alt="Demo of filter function in Spotify Tools" style={{maxHeight: '52vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -311,8 +311,8 @@ function ProjectHellHunter({ projectId }) {
       <Collapsible isExpanded={isExpanded}>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
-            <img src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={hhdemo2} alt="Demo of menu in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
+            <img className="displayImage" src={hhdemo1} alt="Demo of gameplay in Hell's Hunters" style={{maxHeight: '31vh', maxWidth: '40vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>
@@ -348,7 +348,7 @@ function ProjectIslandExplorer({ projectId }) {
       <Collapsible isExpanded={isExpanded}>
         <ScrollFade>
           <div className="imgPanel">
-            <img src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
+            <img className="displayImage" src={iedemo} alt="Map exporation performed by Island Explorer" style={{maxHeight: '40vh', maxWidth: '90vw'}}/>
           </div>
         </ScrollFade>
       </Collapsible>

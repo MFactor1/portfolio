@@ -136,6 +136,10 @@ body::before {
 	margin-bottom: 15px;
 }
 
+.displayImage {
+	border-radius: 8px;
+}
+
 .showMore {
 	font-family: GlobalItalic;
 	cursor: pointer;
