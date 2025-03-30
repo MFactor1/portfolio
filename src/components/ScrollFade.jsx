@@ -24,9 +24,11 @@ const ScrollFade = ({ children, style={} }) => {
     delay = 1 - scrollYProgress.get();
   }, []);
 
+  /*
   useEffect(() => {
     console.log(animationKey + ": " + delay);
   }, [animationKey]);
+   */
 
   return (
     <div ref={ref} style={style}>
