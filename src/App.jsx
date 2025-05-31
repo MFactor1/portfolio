@@ -1,6 +1,7 @@
 import React from 'react'
-import { Routes, Route, Link, useLocation } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
+import { motion, AnimatePresence } from 'motion/react';
+import { Routes, Route, Link, useNavigate, useLocation } from "react-router-dom";
 
 import resume from './assets/Resume.pdf'
 
@@ -15,6 +16,89 @@ import Projects from './pages/Projects'
 import Skills from './pages/Skills'
 import Readings from './pages/Readings'
 
+function Nav() {
+  const isMobile = useIsMobile();
+  const tabs = [
+    {path: "/", label: "Home", ul_scale: isMobile ? 0.4 : 0.6},
+    {path: "/experience", label: "Experience", ul_scale: isMobile ? 0.8 : 0.8},
+    {path: "/projects", label: "Projects", ul_scale: isMobile ? 0.7 : 0.8},
+    {path: "/skills", label: "Skills", ul_scale: isMobile ? 0.5 : 0.7},
+    {path: "/readings", label: "Readings", ul_scale: isMobile ? 0.7 : 0.8},
+  ];
+  const navigator = useNavigate();
+
+  return (
+    <>
+      {isMobile ?
+        <nav className="navbar"  style={{ display: "flex", flexDirection: "column", textAlign: "center" }}>
+          {tabs.map((item) => (
+            <ScrollFade>
+              <motion.li
+                key={item.path}
+                className='navTab'
+                onClick={() => navigator(item.path)}
+              >
+                {item.label}
+                {item.path === useLocation().pathname && (
+                  <AnimatePresence>
+                    <motion.div
+                      key={item.path}
+                      className='mobileNavUnderline'
+                      initial={{
+                        scaleX: 0,
+                      }}
+                      animate={{
+                        scaleX: item.ul_scale
+                      }}
+                      exit={{
+                        scaleX: 0,
+                      }}
+                      transition={{ duration: 0.25 }}
+                    />
+                  </AnimatePresence>
+                )}
+              </motion.li>
+            </ScrollFade>
+          ))}
+        </nav>
+      :
+        <nav className="desktopnavbar">
+          {tabs.map((item) => (
+            <ScrollFade>
+              <motion.li
+                key={item.path}
+                initial={false}
+                className='navTab'
+                onClick={() => navigator(item.path)}
+              >
+                {item.label}
+                {item.path === useLocation().pathname ? (
+                  <AnimatePresence>
+                    <motion.div
+                      className='navUnderline'
+                      layoutId='navUnderline'
+                      id='navUnderline'
+                      initial={{
+                        scale: 1.5,
+                      }}
+                      animate={{
+                        scale: item.ul_scale
+                      }}
+                      exit={{
+                        scale: 1.5,
+                      }}
+                    />
+                  </AnimatePresence>
+                ) : null}
+              </motion.li>
+            </ScrollFade>
+          ))}
+        </nav>
+      }
+    </>
+  );
+}
+
 export default function App() {
   const isMobile = useIsMobile();
 
@@ -25,23 +109,7 @@ export default function App() {
           <ScrollFade>
             <h1 className="title" style={{ textAlign: isMobile ? "center" : "left" }}>Matthew Nesbitt</h1>
           </ScrollFade>
-          <nav className="navbar" style={{ display: "flex", flexDirection: isMobile ? "column" : "row", textAlign: isMobile ? "center" : "left"}}>
-            <ScrollFade>
-              <Link to="/" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Home</Link>
-            </ScrollFade>
-            <ScrollFade>
-              <Link to="/experience" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Experience</Link>
-            </ScrollFade>
-            <ScrollFade>
-              <Link to="/projects" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Projects</Link>
-            </ScrollFade>
-            <ScrollFade>
-              <Link to="/skills" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Skills</Link>
-            </ScrollFade>
-            <ScrollFade>
-              <Link to="/readings" onClick={() => setTimeout(ForceScrollUpdate, 200)} style={{ marginRight: isMobile ? "0px" : "20px" }}>{ isMobile ? "" : "-> " }Readings</Link>
-            </ScrollFade>
-          </nav>
+          <Nav />
         </header>
         <main className="bodypages" style={{ marginLeft: isMobile ? "0px" : "20px" }}>
           <Routes>
