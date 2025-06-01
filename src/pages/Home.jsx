@@ -2,6 +2,8 @@ import React from 'react'
 
 import pfp from '../assets/images/WebsitePfp.png'
 
+import Footer from '../components/Footer'
+
 import useIsMobile from '../components/IsMobile'
 import ScrollFade from '../components/ScrollFade'
 
@@ -26,6 +28,7 @@ export default function Home() {
         <ScrollFade><p>Whether porting multi-million-dollar codebases, designing clean UIs, or leading cross-functional teams, I bring curiosity, discipline, and a proven
         record of turning ambitious ideas into robust software. Let’s build something remarkable together.</p></ScrollFade>
 			</div>
+      <Footer />
 		</>
 	);
 }

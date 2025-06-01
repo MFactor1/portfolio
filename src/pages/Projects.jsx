@@ -10,6 +10,7 @@ import hhdemo2 from '../assets/images/MenuShowcase.gif'
 import iedemo from '../assets/images/Explorer.png'
 import geolens1 from '../assets/images/GeoLensLogin.gif'
 import geolens2 from '../assets/images/GeoLensDetermination.png'
+import Footer from '../components/Footer'
 
 import Collapsible from '../components/Collapsible'
 import ScrollFade from '../components/ScrollFade'
@@ -17,17 +18,20 @@ import {useProjectsState, ProjectsProvider} from '../components/ProjectsContext'
 
 export default function Projects() {
   return (
-    <ProjectsProvider>
-      <ProjectGeoLens projectId='9' />
-      <ProjectAccCom projectId='1' />
-      <ProjectGAC projectId='2'/>
-      <ProjectNoteFlow projectId='3' />
-      <ProjectPortfolio projectId='4' />
-      <ProjectIslandExplorer projectId='5' />
-      <ProjectSpotify projectId='6' />
-      <ProjectHellHunter projectId='7' />
-      <ProjectMazeSolver projectId='8' />
-    </ProjectsProvider>
+    <>
+      <ProjectsProvider>
+        <ProjectGeoLens projectId='9' />
+        <ProjectAccCom projectId='1' />
+        <ProjectGAC projectId='2'/>
+        <ProjectNoteFlow projectId='3' />
+        <ProjectPortfolio projectId='4' />
+        <ProjectIslandExplorer projectId='5' />
+        <ProjectSpotify projectId='6' />
+        <ProjectHellHunter projectId='7' />
+        <ProjectMazeSolver projectId='8' />
+      </ProjectsProvider>
+      <Footer />
+    </>
   );
 }
 

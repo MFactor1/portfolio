@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Footer from '../components/Footer'
+
 import ScrollFade from '../components/ScrollFade'
 
 export default function Experience() {
@@ -79,6 +81,7 @@ export default function Experience() {
           <ScrollFade><li>Integrated <b>novel devices</b> into the system & <b>created surrounding protocol</b>.</li></ScrollFade>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

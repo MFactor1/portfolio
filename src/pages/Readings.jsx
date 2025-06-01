@@ -2,6 +2,8 @@ import React from 'react'
 import useIsMobile from '../components/IsMobile'
 import ScrollFade from '../components/ScrollFade'
 
+import Footer from '../components/Footer'
+
 import isMathReal from '../assets/images/isMathReal.jpg'
 import humansHistory from '../assets/images/humansHistory.jpg'
 
@@ -54,6 +56,7 @@ export default function Readings() {
           Though I have not yet read it, <i>Humans</i> leads the reader through human history, highlighting all the times we've managed to "f*ck things up". I am quite looking forwards to reading this.
         </div>
       </ScrollFade>
+      <Footer />
     </>
   );
 }

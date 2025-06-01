@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Footer from '../components/Footer'
+
 import ScrollFade from '../components/ScrollFade'
 
 export default function Skills() {
@@ -27,6 +29,7 @@ export default function Skills() {
           </p>
         </ScrollFade>
       </div>
+      <Footer />
     </>
   );
 }
